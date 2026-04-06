@@ -10,9 +10,9 @@ export default function ContactPage() {
               Have questions about our financial services? Contact our experts today.
             </p>
             <div className="space-y-4">
-              <p><strong>Email:</strong> info@accounting.com</p>
-              <p><strong>Phone:</strong> +1 234 567 890</p>
-              <p><strong>Address:</strong> 123 Finance St, New York, USA</p>
+              <p><strong>Email:</strong> ansaasgar710@gmail.com</p>
+              <p><strong>Phone:</strong> 03018950901</p>
+              <p><strong>Address:</strong> Bharia town lahore</p>
             </div>
           </div>
 

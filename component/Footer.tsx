@@ -7,13 +7,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* About */}
         <div className="space-y-6">
-          <h3 className="text-2xl font-bold">ACCOUNTING<span className="text-blue-500">.</span></h3>
+          <h3 className="text-2xl font-bold">ACCOUNTING<span className="text-blue-500"></span></h3>
           <p className="text-slate-400 text-sm leading-relaxed">
             Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.
           </p>
         </div>
 
-        {/* Quick Links */}
+    
         <div>
           <h4 className="font-bold mb-6 text-lg">Links</h4>
           <ul className="space-y-4 text-slate-400 text-sm">
@@ -23,7 +23,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Services */}
+    
         <div>
           <h4 className="font-bold mb-6 text-lg">Services</h4>
           <ul className="space-y-4 text-slate-400 text-sm">
@@ -33,11 +33,11 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Info */}
+    
         <div>
           <h4 className="font-bold mb-6 text-lg">Have a Question?</h4>
-          <p className="text-slate-400 text-sm mb-4">123 West 21th Street, Suite 721 New York NY 10016</p>
-          <p className="text-blue-500 font-bold">+2 392 3929 210</p>
+          <p className="text-slate-400 text-sm mb-4">Bharia Town Lahore</p>
+          <p className="text-blue-500 font-bold">03018950901</p>
         </div>
       </div>
       

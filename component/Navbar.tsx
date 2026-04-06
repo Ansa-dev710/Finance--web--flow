@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-// Branded icons ko SVGs mein convert kiya hai taake error na aaye
+
 import { Mail, Phone, Search, Globe, Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '@/lib/constant';
 import { cn } from '@/lib/utils';
@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Reusable Social Icon Component (Using SVGs)
+
   const SocialIcon = ({ path }: { path: string }) => (
     <svg 
       viewBox="0 0 24 24" 
@@ -29,34 +29,34 @@ const Navbar = () => {
         <div className="max-w-480 mx-auto flex justify-between items-center text-[13px]">
           <div className="flex gap-x-6 items-center">
             <span className="flex items-center gap-x-2">
-              <Phone size={14} /> +00 1234 567
+              <Phone size={14} /> 03018950901
             </span>
             <span className="hidden sm:flex items-center gap-x-2">
-              <Mail size={14} /> youremail@email.com
+              <Mail size={14} /> ansaasgar710@gmail.com
             </span>
           </div>
 
           <div className="flex gap-x-5 items-center">
-            {/* Facebook */}
+          
             <SocialIcon path="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-            {/* Twitter/X */}
+        
             <SocialIcon path="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
-            {/* Instagram */}
+        
             <SocialIcon path="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z M17.5 6.5h.01 M2 12c0-4.42 3.58-8 8-8h4c4.42 0 8 3.58 8 8v4c0 4.42-3.58 8-8 8h-4c-4.42 0-8-3.58-8-8v-4z" />
             <Globe size={16} className="hover:text-(--color-primary) cursor-pointer" />
           </div>
         </div>
       </div>
 
-      {/* 2. MAIN WHITE NAVBAR */}
+    
       <div className="border-b border-slate-100 py-5 px-4 md:px-10">
         <div className="flex justify-between items-center max-w-480 mx-auto">
-          {/* Logo */}
+      
           <Link href="/" className="text-2xl font-black text-slate-900 tracking-tight">
             Accounting<span className="text-(--color-primary)">.</span>
           </Link>
 
-          {/* Desktop Navigation */}
+    
           <div className="hidden lg:flex items-center space-x-10">
             {NAV_LINKS.map((link) => (
               <Link 
@@ -74,7 +74,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Search Box */}
+      
           <div className="flex items-center gap-4">
             <div className="relative hidden md:block">
               <input 
@@ -92,7 +92,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+    
       {isOpen && (
         <div className="lg:hidden bg-white border-t p-6 flex flex-col space-y-4 shadow-xl">
           {NAV_LINKS.map((link) => (

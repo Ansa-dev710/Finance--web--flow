@@ -1,43 +1,83 @@
 @import "tailwindcss";
 
-
+/* 1. Theme Configuration (Tailwind v4 style) */
 @theme {
   --color-primary: #5cb85c;
   --color-dark-bar: #3c306d;
   --color-light-bg: #f9f9f9;
-  --color-search: #f4f4f4;
-  --font-inter: var(--font-inter);
-  --font-manrope: var(--font-manrope);
+  
+  /* Custom Breakpoints (If you need specific ones) */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
 
-/* Custom components using @apply */
-@layer components {
-  .nav-link-active {
-    @apply text-[--color-primary] relative;
-  }
-
-  /* v4 mein complex pseudo-elements (::after) ko 
-     @apply ke andar likhne ki bajaye direct CSS mein likhna behtar hai */
-  .nav-link-active::after {
-    content: "";
-    position: absolute;
-    bottom: -26px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--color-primary);
-  }
-
-  h1 {
-    @apply font-extrabold text-white leading-tight;
+/* 2. Custom Media Queries & Utility Classes */
+@layer base {
+  html {
+    @apply scroll-smooth;
   }
   
-  .section-tag {
-    @apply text-[--color-primary] font-bold text-sm tracking-widest uppercase;
+  body {
+    @apply antialiased bg-white text-slate-900;
+    font-family: var(--font-inter), sans-serif;
   }
 }
 
-body {
-  @apply antialiased bg-white text-slate-900;
-  font-family: var(--font-inter), sans-serif;
+@layer components {
+  /* --- RESPONSIVE TYPOGRAPHY --- */
+  
+  /* Mobile par font chota aur Desktop par bada (Clamp usage) */
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    @apply font-black text-white leading-tight;
+  }
+
+  /* --- CUSTOM MEDIA QUERIES --- */
+
+  /* Sirf Mobile Screens ke liye (max-width: 767px) */
+  @media (max-width: 767px) {
+    .mobile-nav-shadow {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .section-padding {
+      @apply py-12 px-4;
+    }
+  }
+
+  /* Tablets aur small laptops ke liye (768px to 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .grid-responsive {
+      @apply grid-cols-2 gap-6;
+    }
+  }
+
+  /* Large Screens / High Res (1920px logic) */
+  @media (min-width: 1920px) {
+    .container-wide {
+      max-width: 1600px;
+      @apply mx-auto;
+    }
+  }
+
+  /* --- NAV UNDERLINE ANIMATION --- */
+  .nav-link-active::after {
+    content: "";
+    @apply absolute -bottom-[22px] left-0 w-full h-[3px] bg-(--color-primary);
+  }
+}
+
+/* 3. Utility for Hide/Show (Custom) */
+.hide-on-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hide-on-mobile {
+    display: block;
+  }
 }
