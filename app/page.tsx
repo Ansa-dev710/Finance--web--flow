@@ -1,16 +1,28 @@
 import Hero from "@/component/Hero";
+import Welcome from "@/component/welcome";
 import Features from "@/component/Feature";
-
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="bg-white">
+
       <Hero />
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Core Services</h2>
+      
+      
+      <Welcome />
+
+      <div className="max-w-7xl mx-auto px-6 py-24 bg-gray-50">
+        <div className="text-center mb-16">
+          <p className="text-green-600 font-bold tracking-[0.2em] uppercase text-sm mb-2">
+            Services
+          </p>
+          <h2 className="text-4xl font-black text-slate-900 tracking-tight">
+            Our Core Services
+          </h2>
+        </div>
         <Features />
       </div>
-      {/* Future sections yahan call honge */}
+      
     </main>
   );
 }
