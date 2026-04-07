@@ -2,6 +2,7 @@ import Hero from "@/component/Hero";
 import Welcome from "@/component/welcome";
 import Features from "@/component/Feature";
 import ServicesAndStats from "@/component/servicesStats";
+import Testimonials from "@/component/Testimonial"; 
 
 export default function HomePage() {
   return (
@@ -11,8 +12,11 @@ export default function HomePage() {
       
       <Welcome />
 
-      {/* Services and Stats Section (Jo screenshot aapne share kiya tha) */}
+      {/* Services and Stats Section */}
       <ServicesAndStats />
+
+      {/* Testimonials Section (Jo background overlap ke sath hai) */}
+      <Testimonials />
 
       <div className="max-w-7xl mx-auto px-6 py-24 bg-gray-50">
         <div className="text-center mb-16">
