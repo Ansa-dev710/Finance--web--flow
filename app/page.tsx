@@ -4,6 +4,7 @@ import ServicesAndStats from "@/component/servicesStats";
 import Testimonials from "@/component/Testimonial"; 
 import Faqs from "@/component/Faq"; 
 import BlogSection from "@/component/Blog"; 
+import Newsletter from "@/component/NewsSectionLetter"; 
 
 export default function HomePage() {
   return (
@@ -13,17 +14,16 @@ export default function HomePage() {
       
       <Welcome />
 
-    
       <ServicesAndStats />
-
 
       <Testimonials />
 
-
       <Faqs />
 
-    
       <BlogSection />
+
+      
+      <Newsletter />
       
     </main>
   );
