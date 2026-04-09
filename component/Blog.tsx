@@ -44,7 +44,7 @@ const BlogSection = () => {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         
-        {/* Section Header */}
+      
         <div className="text-center mb-16">
           <motion.span 
             initial={{ opacity: 0, y: 10 }}
@@ -65,7 +65,7 @@ const BlogSection = () => {
           </motion.h2>
         </div>
 
-        {/* Blog Grid */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {blogData.map((post, index) => (
             <motion.div
@@ -76,7 +76,7 @@ const BlogSection = () => {
               viewport={{ once: true }}
               className="group"
             >
-              {/* Image Container */}
+          
               <div className="relative h-64 w-full mb-6 overflow-hidden rounded-sm shadow-sm bg-gray-100">
                 <Image
                   src={post.image}
@@ -86,7 +86,7 @@ const BlogSection = () => {
                 />
               </div>
 
-              {/* Meta Data */}
+              
               <div className="flex items-center space-x-4 text-[11px] font-bold text-gray-400 tracking-widest mb-4">
                 <span className="uppercase">{post.date}</span>
                 <span className="uppercase">{post.author}</span>
@@ -96,14 +96,14 @@ const BlogSection = () => {
                 </span>
               </div>
 
-              {/* Title */}
+          
               <Link href={post.href}>
                 <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-[#00bd56] transition-colors duration-300 mb-3">
                   {post.title}
                 </h3>
               </Link>
 
-              {/* Description */}
+          
               <p className="text-gray-500 text-[15px] leading-relaxed line-clamp-2">
                 {post.description}
               </p>
