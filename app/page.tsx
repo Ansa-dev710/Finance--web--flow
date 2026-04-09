@@ -3,6 +3,7 @@ import Welcome from "@/component/welcome";
 import ServicesAndStats from "@/component/servicesStats";
 import Testimonials from "@/component/Testimonial"; 
 import Faqs from "@/component/Faq"; 
+import BlogSection from "@/component/Blog"; 
 
 export default function HomePage() {
   return (
@@ -20,6 +21,9 @@ export default function HomePage() {
 
       {/* 3. FAQ Section (Overlapping images + Accordion) */}
       <Faqs />
+
+      {/* 4. Blog Section (Latest news cards) */}
+      <BlogSection />
       
     </main>
   );
