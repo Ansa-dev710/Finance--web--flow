@@ -13,16 +13,16 @@ export default function HomePage() {
       
       <Welcome />
 
-      {/* 1. Services and Stats Section (Watermark icons + Counter) */}
+    
       <ServicesAndStats />
 
-      {/* 2. Testimonials Section (Teal background with auto-scroll cards) */}
+
       <Testimonials />
 
-      {/* 3. FAQ Section (Overlapping images + Accordion) */}
+
       <Faqs />
 
-      {/* 4. Blog Section (Latest news cards) */}
+    
       <BlogSection />
       
     </main>

@@ -53,7 +53,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center max-w-480 mx-auto">
       
           <Link href="/" className="text-2xl font-black text-slate-900 tracking-tight">
-            Accounting<span className="text-(--color-primary)">.</span>
+            Accounting<span className="text-(--color-primary)"></span>
           </Link>
 
     
