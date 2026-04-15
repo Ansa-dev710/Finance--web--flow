@@ -23,7 +23,7 @@ const PricingServices = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className="bg-white p-10 rounded-sm shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center border border-gray-50"
+              className="bg-white p-10 rounded-sm shadow-lg hover:shadow-2xl transition-all duration-300 text-center border border-gray-50 flex flex-col"
             >
               {/* Plan Name */}
               <h3 className="text-[#5cb85c] font-bold tracking-widest mb-8">{plan.name}</h3>
@@ -36,7 +36,7 @@ const PricingServices = () => {
               </div>
 
               {/* Features List */}
-              <ul className="space-y-5 text-left inline-block">
+              <ul className="space-y-5 text-left inline-block mb-10 flex-grow">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center text-gray-600">
                     <Check size={18} className="text-[#87d5fb] mr-3 font-bold" />
@@ -44,6 +44,11 @@ const PricingServices = () => {
                   </li>
                 ))}
               </ul>
+
+              {/* Get Started Button */}
+              <button className="w-full py-4 px-6 bg-[#5cb85c] text-white font-bold rounded-md hover:bg-[#4cae4c] hover:shadow-md transition-all duration-300 uppercase tracking-wider text-sm">
+                Get Started
+              </button>
             </div>
           ))}
         </div>
