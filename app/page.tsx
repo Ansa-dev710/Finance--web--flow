@@ -5,25 +5,46 @@ import Testimonials from "@/component/Testimonial";
 import Faqs from "@/component/Faq"; 
 import BlogSection from "@/component/Blog"; 
 import Newsletter from "@/component/NewsSectionLetter"; 
+import PricingServices from "@/component/PricingServisec"; 
 
 export default function HomePage() {
   return (
     <main className="bg-white">
-
-      <Hero />
+      {/* Hero Section */}
+      <section id="home">
+        <Hero />
+      </section>
       
-      <Welcome />
+      {/* Welcome/About Section */}
+      <section id="about">
+        <Welcome />
+      </section>
 
+      {/* Stats Section */}
       <ServicesAndStats />
 
-      <Testimonials />
+      {/* Testimonials */}
+      <section id="testimonials">
+        <Testimonials />
+      </section>
 
-      <Faqs />
+      {/* FAQ Section */}
+      <section id="faqs">
+        <Faqs />
+      </section>
 
-      <BlogSection />
+      {/* Blog Section */}
+      <section id="blog">
+        <BlogSection />
+      </section>
+      
+      {/* Newsletter Section */}
+      <Newsletter />
 
       
-      <Newsletter />
+      <section id="services">
+        <PricingServices />
+      </section>
       
     </main>
   );

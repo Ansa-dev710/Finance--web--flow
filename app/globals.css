@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
-/* 1. Theme Configuration (Tailwind v4 style) */
+/* 1. Theme Configuration */
 @theme {
   --color-primary: #5cb85c;
   --color-dark-bar: #3c306d;
   --color-light-bg: #f9f9f9;
   
-  /* Custom Breakpoints (If you need specific ones) */
   --breakpoint-xs: 480px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
@@ -18,19 +17,23 @@
 /* 2. Custom Media Queries & Utility Classes */
 @layer base {
   html {
-    @apply scroll-smooth;
+    /* Click karne par smooth scrolling ke liye */
+    scroll-behavior: smooth;
   }
   
   body {
     @apply antialiased bg-white text-slate-900;
     font-family: var(--font-inter), sans-serif;
   }
+
+  /* Anchor tags ke liye default offset (navbar height ki wajah se text chupta nahi) */
+  section {
+    scroll-margin-top: 80px;
+  }
 }
 
 @layer components {
   /* --- RESPONSIVE TYPOGRAPHY --- */
-  
-  /* Mobile par font chota aur Desktop par bada (Clamp usage) */
   .hero-title {
     font-size: clamp(2rem, 5vw, 4.5rem);
     @apply font-black text-white leading-tight;
@@ -38,7 +41,7 @@
 
   /* --- CUSTOM MEDIA QUERIES --- */
 
-  /* Sirf Mobile Screens ke liye (max-width: 767px) */
+  /* Mobile Screens */
   @media (max-width: 767px) {
     .mobile-nav-shadow {
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -49,14 +52,14 @@
     }
   }
 
-  /* Tablets aur small laptops ke liye (768px to 1024px) */
+  /* Tablets & Small Laptops */
   @media (min-width: 768px) and (max-width: 1024px) {
     .grid-responsive {
       @apply grid-cols-2 gap-6;
     }
   }
 
-  /* Large Screens / High Res (1920px logic) */
+  /* Large Screens */
   @media (min-width: 1920px) {
     .container-wide {
       max-width: 1600px;
@@ -65,13 +68,18 @@
   }
 
   /* --- NAV UNDERLINE ANIMATION --- */
+  /* Isay hum custom property (primary color) ke saath use kar rahe hain */
+  .nav-link-active {
+    @apply relative text-(--color-primary);
+  }
+
   .nav-link-active::after {
     content: "";
     @apply absolute -bottom-[22px] left-0 w-full h-[3px] bg-(--color-primary);
   }
 }
 
-/* 3. Utility for Hide/Show (Custom) */
+/* 3. Utility for Hide/Show */
 .hide-on-mobile {
   display: none;
 }
