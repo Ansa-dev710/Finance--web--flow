@@ -10,35 +10,35 @@ import PricingServices from "@/component/PricingServisec";
 export default function HomePage() {
   return (
     <main className="bg-white">
-      {/* Hero Section */}
+
       <section id="home">
         <Hero />
       </section>
       
-      {/* Welcome/About Section */}
+  
       <section id="about">
         <Welcome />
       </section>
 
-      {/* Stats Section */}
+      
       <ServicesAndStats />
 
-      {/* Testimonials */}
+      
       <section id="testimonials">
         <Testimonials />
       </section>
 
-      {/* FAQ Section */}
+  
       <section id="faqs">
         <Faqs />
       </section>
 
-      {/* Blog Section */}
+    
       <section id="blog">
         <BlogSection />
       </section>
       
-      {/* Newsletter Section */}
+    
       <Newsletter />
 
       
