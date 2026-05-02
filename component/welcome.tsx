@@ -35,7 +35,7 @@ const Welcome = () => {
           />
         </div>
 
-        {/* Right Side: Content */}
+  
         <div>
           <span className="text-green-600 font-bold uppercase tracking-widest text-xs">
             Welcome to Accounting
