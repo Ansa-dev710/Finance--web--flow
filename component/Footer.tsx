@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="bg-[#222222] text-white pt-20 pb-10 font-inter">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
         
-        {/* 1. About Us Section */}
+      
         <div className="lg:col-span-3 space-y-6">
           <h4 className="text-lg font-bold uppercase tracking-wider">About Us</h4>
           <p className="text-gray-400 text-sm leading-relaxed">
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* 2. Services Section */}
+      
         <div className="lg:col-span-2 space-y-6">
           <h4 className="text-lg font-bold uppercase tracking-wider">Services</h4>
           <ul className="text-gray-400 space-y-4 text-sm">
@@ -49,7 +49,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* 3. Discover Section */}
+        
         <div className="lg:col-span-2 space-y-6">
           <h4 className="text-lg font-bold uppercase tracking-wider">Discover</h4>
           <ul className="text-gray-400 space-y-4 text-sm">
@@ -60,7 +60,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* 4. Consultation Form Section */}
+      
         <div className="lg:col-span-5 bg-[#2d2d2d] p-8 rounded-sm shadow-xl">
           <h4 className="text-lg font-bold uppercase tracking-wider mb-6">Free Consultation</h4>
           <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
@@ -91,7 +91,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      
       <div className="max-w-7xl mx-auto px-6 border-t border-gray-800 mt-16 pt-8 text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
         <p>Copyright ©{new Date().getFullYear()} All rights reserved | This template is made with ❤️ by <span className="text-[#00c04b] font-medium">Ansa Asghar</span></p>
       </div>

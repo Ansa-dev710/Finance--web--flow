@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-// Note: Single page scroll ke liye hum standard <a> use karenge Next Link ki jagah
+
 import Link from 'next/link'; 
 
 import { Mail, Phone, Search, Globe, Menu, X } from 'lucide-react';
@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white shadow-sm font-inter">
-      {/* 1. TOP DARK BAR */}
+    
       <div className="bg-[#3c306d] text-white py-2 px-4 md:px-10">
         <div className="max-w-480 mx-auto flex justify-between items-center text-[13px]">
           <div className="flex gap-x-6 items-center">
@@ -45,15 +45,15 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* 2. MAIN NAV BAR */}
+      
       <div className="border-b border-slate-100 py-5 px-4 md:px-10">
         <div className="flex justify-between items-center max-w-480 mx-auto">
           
           <Link href="/" className="text-2xl font-black text-slate-900 tracking-tight">
-            Accounting<span className="text-(--color-primary)">.</span>
+            Accounting<span className="text-(--color-primary)"></span>
           </Link>
 
-          {/* DESKTOP MENU - Fixed with <a> tags for anchor scrolling */}
+          
           <div className="hidden lg:flex items-center space-x-10">
             {NAV_LINKS.map((link) => (
               <a 
@@ -85,7 +85,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
+    
       {isOpen && (
         <div className="lg:hidden bg-white border-t p-6 flex flex-col space-y-4 shadow-xl">
           {NAV_LINKS.map((link) => (
