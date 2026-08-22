@@ -23,7 +23,7 @@ const testimonials = [
     image: "/person_3.jpg",
     feedback: "From market analysis to general consultancy, the insights provided by this agency have been a key driver in our recent 20% year-over-year growth.",
   },
-  // Infinite scroll ke liye hum data ko duplicate kar dete hain taake loop break na ho
+  
   {
     name: "Roger Scott",
     role: "Marketing Manager",
@@ -36,7 +36,7 @@ const Testimonials = () => {
   return (
     <section className="relative py-24 w-full overflow-hidden">
       
-      {/* Background Header */}
+      
       <div 
         className="absolute top-0 left-0 w-full h-[550px]" 
         style={{ backgroundColor: '#8fd0d2', zIndex: 0 }}
@@ -51,18 +51,18 @@ const Testimonials = () => {
         </div>
       </div>
 
-      {/* Animated Cards Container */}
+      
       <div className="relative mt-44" style={{ zIndex: 10 }}>
         <motion.div 
           className="flex gap-8 px-6"
           animate={{
-            x: [0, -1200], // Cards ko left ki taraf move karega
+            x: [0, -1200], 
           }}
           transition={{
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 25, // Speed control (jitna zyada duration, utni slow speed)
+              duration: 25, 
               ease: "linear",
             },
           }}
@@ -73,7 +73,7 @@ const Testimonials = () => {
               key={index}
               className="bg-white p-10 rounded-sm shadow-2xl shadow-black/5 relative group min-w-[350px] md:min-w-[400px]"
             >
-              {/* Quote Icon */}
+            
               <div className="absolute -top-5 left-8 w-12 h-12 bg-[#00bd56] rounded-full flex items-center justify-center text-white shadow-lg">
                 <Quote size={20} fill="currentColor" />
               </div>
@@ -82,7 +82,7 @@ const Testimonials = () => {
                 "{item.feedback}"
               </p>
 
-              {/* User Info */}
+            
               <div className="flex items-center gap-4">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-gray-100 flex-shrink-0">
                   <Image
@@ -106,7 +106,7 @@ const Testimonials = () => {
         </motion.div>
       </div>
 
-      {/* Pagination (Static decoration to match UI) */}
+    
       <div className="flex justify-center gap-2 mt-16 relative z-10">
         <div className="w-2.5 h-2.5 rounded-full bg-[#00bd56]"></div>
         <div className="w-2.5 h-2.5 rounded-full bg-slate-300"></div>

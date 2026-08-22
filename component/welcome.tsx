@@ -25,7 +25,7 @@ const Welcome = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
-        {/* Left Side: Image */}
+    
         <div className="relative h-[500px] w-full rounded-lg overflow-hidden">
           <Image
             src="/about-image.jpg" 
